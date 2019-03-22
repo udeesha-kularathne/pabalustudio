@@ -37,22 +37,23 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="demo/demo.css" rel="stylesheet"/>
-
+    >
     <style>
         body {
             width: 100%;
             height: 100%;
-            background-image: url('images/bg2.jpg');
+            background-image: url('images/bg7.jpg');
             background-size: cover;
             border: none;
         }
     </style>
     <script>
-        $(document).ready(function () {
+        $(function () {
+            $("#change1").hide()
             $("#photo1").click(function () {
-                $('#change1').load("check1.html #photo2");
-            });
-        });
+                $("#change1").toggle(350,)
+            })
+        })
     </script>
 </head>
 
@@ -95,29 +96,316 @@
                                     <div class="row mt-5 justify-content-center ">
                                         <div class="form-check">
                                             <label class="form-check-label ">
-                                                <input id="photo1" class="form-check-input" type="radio" name="mainchoose"
+                                                <input id="photo1" class="form-check-input" type="radio"
+                                                       name="mainchoose"
                                                        value="option1"> Photography
                                                 <span class="circle"><span class="check"></span></span>
                                             </label>
                                         </div>
                                         <div class="form-check ">
                                             <label class="form-check-label">
-                                                <input id="video1" class="form-check-input" type="radio" name="mainchoose"
+                                                <input id="video1" class="form-check-input" type="radio"
+                                                       name="mainchoose"
                                                        value="option2">Videography
                                                 <span class="circle"><span class="check"></span></span>
                                             </label>
                                         </div>
                                         <div class="form-check ">
                                             <label class="form-check-label">
-                                                <input id="photovideo" class="form-check-input" type="radio" name="mainchoose"
+                                                <input id="photovideo" class="form-check-input" type="radio"
+                                                       name="mainchoose"
                                                        value="option2"> Photo & Video
                                                 <span class="circle"><span class="check"></span></span>
 
                                             </label>
                                         </div>
                                     </div>
-                                    <section id="change1"></section>
+                                    <section id="change1">
+                                        <section id="photo2">
+                                            <div class="row">
+                                                <label class="col-sm-2 col-form-label">Magazine Story Book</label>
+                                                <div class="col-sm-10">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control">
+                                                        <span class="bmd-help">specify how many pages you want</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <label class="col-sm-2 col-form-label">Thanking Cards</label>
+                                                <div class="col-sm-5">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control">
+                                                        <span class="bmd-help">Number of cards and tick the Size</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row mt-4" id="checkphoto1">
+                                                    <div class="form-check">
+                                                        <label class="form-check-label ">
+                                                            <input class="form-check-input" type="radio"
+                                                                   name="thankcardsize"
+                                                                   value="option1" checked>4x8
+                                                            <span class="circle"><span class="check"></span></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check ">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="radio"
+                                                                   name="thankcardsize"
+                                                                   value="option2">6x6
+                                                            <span class="circle"><span class="check"></span></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check ">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="radio"
+                                                                   name="thankcardsize"
+                                                                   value="option3">5x7
+                                                            <span class="circle"><span class="check"></span></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check ">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="radio"
+                                                                   name="thankcardsize"
+                                                                   value="option4">6x8
+                                                            <span class="circle"><span class="check"></span></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-lg-n2 " id="checkphoto2">
+                                                <label class="col-sm-2 col-form-label">Thanks card</label>
+                                                <div class="form-check mt-3">
+                                                    <label class="form-check-label ">
+                                                        <input class="form-check-input" type="radio"
+                                                               name="thankcardside"
+                                                               value="" checked>Single Side
+                                                        <span class="circle"><span class="check"></span></span>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mt-3 ">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="radio"
+                                                               name="thankcardside"
+                                                               value="">Double Side
+                                                        <span class="circle"><span class="check"></span></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-3 ">
+                                                <label class="col-sm-2 col-form-label">Wedding photos</label>
+                                                <div class="col-sm-2">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control">
+                                                        <span class="bmd-help">Number of photos</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-3 col-sm-3">
+                                                    <select class="selectpicker" data-style="select-with-transition"
+                                                            title="18x24" data-size="7">
+                                                        <option disabled>Framed photos</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-4 col-md-3 col-sm-3">
+                                                    <select class="selectpicker" data-style="select-with-transition"
+                                                            title="20x30" data-size="7">
+                                                        <option disabled> Framed photos</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-3 ">
+                                                <label class="col-sm-2 col-form-label">Bride Single photos</label>
+                                                <div class="form-check mt-3">
+                                                    <label class="form-check-label ">
+                                                        <input class="form-check-input" type="radio"
+                                                               name="bridesinglepphotosize"
+                                                               value="option1" checked>12x15
+                                                        <span class="circle"><span class="check"></span></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-lg-4 col-md-3 col-sm-3">
+                                                    <select class="selectpicker" data-style="select-with-transition"
+                                                            title="Select..." data-size="7">
+                                                        <option disabled> Framed photos</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-3 ">
+                                                <label class="col-sm-2 col-form-label">Group photos</label>
+                                                <div class="form-check mt-3">
+                                                    <label class="form-check-label ">
+                                                        <input class="form-check-input" type="radio"
+                                                               name="groupphotosize"
+                                                               value="option1" checked>10x15
+                                                        <span class="circle"><span class="check"></span></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-lg-4 col-md-3 col-sm-3">
+                                                    <select class="selectpicker" data-style="select-with-transition"
+                                                            title="Select..." data-size="7">
+                                                        <option disabled> Framed photos</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-3 ">
+                                                <label class="col-sm-2 col-form-label">bestmen & Bridesmaid</label>
+                                                <div class="form-check mt-3">
+                                                    <label class="form-check-label ">
+                                                        <input class="form-check-input" type="radio" name="bestbride"
+                                                               value="option1" checked>10x12
+                                                        <span class="circle"><span class="check"></span></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-lg-4 col-md-3 col-sm-3">
+                                                    <select class="selectpicker" data-style="select-with-transition"
+                                                            title="Framed" data-size="7">
+                                                        <option disabled> Framed photos</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-4 col-md-3 col-sm-3">
+                                                    <select class="selectpicker" data-style="select-with-transition"
+                                                            title="Not Framed" data-size="7">
+                                                        <option disabled>Not Framed</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-1  ">
+                                                <label class="col-sm-2 col-form-label">Picture DVD</label>
+                                                <div class="form-check mt-3">
+                                                    <label class="form-check-label ">
+                                                        <input class="form-check-input " type="radio" name="picturedvd"
+                                                               value="option1" checked>6x6
+                                                        <span class="circle"><span class="check"></span></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-lg-4 col-md-3 col-sm-3 ">
+                                                    <select class="selectpicker ml-lg-2"
+                                                            data-style="select-with-transition"
+                                                            title="Select..." data-size="7">
+                                                        <option disabled> Framed photos</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-1  ">
+                                                <label class="col-sm-2 col-form-label">Entrance Decors</label>
+                                                <div class="form-check mt-3">
+                                                    <label class="form-check-label ">
+                                                        <input class="form-check-input " type="radio"
+                                                               name="entrancedecors"
+                                                               value="option1" checked>6x6
+                                                        <span class="circle"><span class="check"></span></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-lg-4 col-md-3 col-sm-3 ">
 
+                                                    <select class="selectpicker ml-lg-2"
+                                                            data-style="select-with-transition"
+                                                            title="Select..." data-size="7">
+                                                        <option disabled> Framed photos</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-1  ">
+                                                <label class="col-sm-2 col-form-label">Preshoot</label>
+                                                <div class="form-check mt-3">
+                                                    <label class="form-check-label ">
+                                                        <input class="form-check-input " type="radio" name="preshoot"
+                                                               value="option1" checked>Yes
+                                                        <span class="circle"><span class="check"></span></span>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mt-3">
+                                                    <label class="form-check-label ">
+                                                        <input class="form-check-input " type="radio" name="preshoot"
+                                                               value="option1">No
+                                                        <span class="circle"><span class="check"></span></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </section>
+
+                                    </section>
                                 </form>
                             </div>
                         </div>
